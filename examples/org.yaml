@@ -15,3 +15,29 @@ metadata:
 spec:
   type: team
   children: []
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: hoanglh2
+spec:
+  memberOf: [gea-dev]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: tinnguyen
+spec:
+  memberOf: [gea-dev]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: gea-dev
+spec:
+  type: team
+  children: []

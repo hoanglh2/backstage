@@ -1,0 +1,21 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gea-fe
+  description: |
+    The GEA FE system is a frontend system for the GEA BEA website.
+    It is responsible for serving the website's UI and user interactions.
+  tags:
+    - frontend
+  annotations:
+    backstage.io/source-location: url:https://github.com/gearment/gea-bizops
+  links:
+    - url: https://app.dev.geadev.com/login?app=pod&redirect=%2F
+      title: Web App
+      icon: web
+spec:
+  type: website
+  lifecycle: experimental
+  owner: gea-dev
+  system: gea-next

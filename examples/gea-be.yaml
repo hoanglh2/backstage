@@ -1,0 +1,81 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: gea-next
+spec:
+  owner: gea-dev
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gea-be
+  description: |
+    The GEA BE system is a backend system for the GEA BEA website.
+    It is responsible for serving the website's API and data.
+  tags:
+    - backend
+    - golang
+  annotations:
+    backstage.io/source-location: url:https://github.com/gearment/gea-next
+    backstage.io/techdocs-ref: url:https://github.com/gearment/gea-next/blob/main/README.md
+    github.com/project-slug: gearment/gea-next
+  links:
+    - url: https://app.dev.geadev.com/login?app=pod&redirect=%2F
+      title: Web App
+      icon: web
+spec:
+  type: website
+  lifecycle: experimental
+  owner: gea-dev
+  system: gea-next
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: finance
+  description: |
+    The Finance system is a backend system for the GEA BEA website.
+    It is responsible for serving the website's API and data.
+  tags:
+    - backend
+    - golang
+  annotations:
+    backstage.io/source-location: url:https://github.com/gearment/gea-next/tree/main/app/finance
+  links:
+    - url: https://app.dev.geadev.com/login?app=pod&redirect=%2F
+      title: Web App
+      icon: web
+spec:
+  type: website
+  lifecycle: experimental
+  owner: user:tinnguyen
+  subcomponentOf: gea-be
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: iam
+  description: |
+    The IAM system is a backend system for the GEA BEA website.
+    It is responsible for serving the website's API and data.
+  tags:
+    - backend
+    - golang
+  annotations:
+    backstage.io/source-location: url:https://github.com/gearment/gea-next/tree/main/app/iam
+  links:
+    - url: https://app.dev.geadev.com/login?app=pod&redirect=%2F
+      title: Web App
+      icon: web
+spec:
+  type: website
+  lifecycle: experimental
+  owner: user:hoanglh2
+  subcomponentOf: gea-be
+
