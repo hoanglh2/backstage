@@ -27,7 +27,7 @@ metadata:
       title: Web App
       icon: web
 spec:
-  type: website
+  type: service
   lifecycle: experimental
   owner: gea-dev
   system: gea-next
